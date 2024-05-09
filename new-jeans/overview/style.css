@@ -1,21 +1,19 @@
 @font-face {
-  font-family: "PartialSansKr";
-  src: url(fonts/PartialSansKR-Regular.otf);
-  font-family: "Freesentation";
-  src: url(/new-jeans/fonts/Freesentation-6SemiBold.ttf);
-  font-family: "Waguri";
-  src: url(fonts/WAGURI\ TTF.ttf);
   font-family: "HakgyoansimKossuyeomR";
   src: url(fonts/HakgyoansimKossuyeomR.ttf);
 }
+@font-face {
+  font-family: "neodgm";
+  src: url(fonts/neodgm_code.ttf);
+}
 
 html {
-  height: 100%;
+  height: auto;
 }
 
 body {
   margin: 0;
-  height: 100%;
+  height: auto;
 }
 
 .icon2 {
@@ -74,8 +72,13 @@ a.buttonlink {
   color: white;
 }
 
-a.buttonlink:hover {
+a.buttonlink:hover,
+a#newJeansLink:hover {
   color: #5078f2;
+}
+
+a#omgLink:hover {
+  color: rgb(255, 108, 255);
 }
 
 .icon_header {
@@ -89,20 +92,17 @@ a.buttonlink:hover {
 
 .links {
   display: flex;
-  /* margin-left: auto; */
   gap: 50px;
   margin-right: 20px;
   margin-top: 40px;
   font-weight: 600;
 }
 
-.left,
-.center,
-.right {
-  display: flex;
-  height: 100%;
-  margin-top: -50px;
-}
+/* 
+
+NEW JEANS STYLING 
+
+*/
 
 .newjeans_overview {
   display: flex;
@@ -111,20 +111,15 @@ a.buttonlink:hover {
   background-position-x: -55px;
   height: 1000px;
   flex: 1;
-}
-
-.left {
-  width: 400px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-right: auto;
-  gap: 150px;
   justify-content: center;
-  align-self: flex-start;
+  gap: 200px;
 }
 
 .center {
-  width: 400px;
+  display: flex;
+  height: 100%;
+  margin-top: -50px;
+  width: 1000px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -135,32 +130,9 @@ a.buttonlink:hover {
   flex-shrink: 0;
 }
 
-.right {
-  width: 400px;
-  flex-direction: column;
-  margin-left: auto;
-  gap: 270px;
+#newJeansLink {
+  color: white;
 }
-
-.hypeboy,
-.hurt,
-.cookie,
-.attention {
-  width: 280px;
-  height: auto;
-}
-
-/* .bg_container {
-    width: 500px;
-    height: 100%;
-    margin-top: 100px;
-    background-image: url(images/new_jeans/cd_icon.png);
-    background-repeat: no-repeat;
-    background-size: 450px  ;
-    background-position: center;
-    justify-content: center;
-
-} */
 
 .newjeans {
   width: 450px;
@@ -170,36 +142,73 @@ a.buttonlink:hover {
 
 .newjeans_text {
   text-align: center;
-  width: 500px;
+  width: 1000px;
   font-size: 25px;
   text-shadow: 2px 2px black;
   margin-top: 20px;
   gap: 200px;
 }
 
-.attention {
-  width: 300px;
-  margin-left: 170px;
-}
-
-.hypeboy {
-  margin-left: 40px;
-  rotate: 20deg;
-}
-
-.cookie {
-  width: 210px;
-  margin-top: 200px;
-  margin-left: 80px;
-}
-
-.hurt {
-  width: 180px;
-}
-
 /*
 
 OMG styling
 
-
 */
+
+.omgOverview {
+  display: flex;
+  font-family: "neodgm";
+  gap: 200px;
+  background-image: url(images/omg/NewJeans-OMG-Concept-Teasers-documents-8.jpeg);
+  background-position-y: -100px;
+  background-repeat: no-repeat;
+  height: 1000px;
+  font-family: "neodgm";
+  justify-content: center;
+  align-items: center;
+}
+
+.omgCenter {
+  display: flex;
+  width: 250px;
+  width: 1000px;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 120px;
+  margin-bottom: 200px;
+  align-items: center;
+}
+
+.omgText {
+  text-align: center;
+  font-family: "neodgm";
+  font-size: 30px;
+  color: rgb(255, 108, 255);
+  text-shadow: 3px 3px black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.omgIcon {
+  width: 450px;
+  height: 300;
+  align-self: center;
+}
+
+.omgRight {
+  width: 500px;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+#omgButton {
+  background: linear-gradient(
+    109.6deg,
+    rgb(247, 108, 243) 11.2%,
+    rgb(173, 64, 254) 100.2%
+  );
+}
+
+#omgLink {
+  color: white;
+}
